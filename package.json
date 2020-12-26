@@ -11,7 +11,7 @@
     "closure:es5": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT5_STRICT --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es5.min.js",
     "closure:es8": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es8.min.js",
     "docs": "jsdoc2md --partial other/scope.hbs --files src/index.js > API.md",
-    "build": "npm run closure:es5 && npm run closure:es8",
+    "build": "npm run closure:es5 && npm run closure:es8 && npm run docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,7 +29,7 @@
   },
   "funding": {
     "type": "individual",
-    "url": "https://github.com/sponsors/Maksims/"
+    "url": "https://github.com/sponsors/Maksims"
   },
   "license": "MIT",
   "bugs": {
