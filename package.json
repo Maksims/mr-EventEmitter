@@ -1,0 +1,36 @@
+{
+  "name": "mr-eventemitter",
+  "version": "0.0.1",
+  "description": "Provides ability to subscribe and emit events in sync manner. With focus on performance and memory efficiency.",
+  "main": "src/index.js",
+  "files": [
+      "dist/mr-eventemitter.es5.min.js",
+      "dist/mr-eventemitter.es8.min.js"
+  ],
+  "scripts": {
+    "closure:es5": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT5_STRICT --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es5.min.js",
+    "closure:es8": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es8.min.js",
+    "docs": "jsdoc2md --partial other/scope.hbs --files src/index.js > API.md",
+    "build": "npm run closure:es5 && npm run closure:es8",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksims/mr-EventEmitter.git"
+  },
+  "keywords": [
+    "events",
+    "eventemitter"
+  ],
+  "author": "Maksims Mihejevs (core@moka.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maksims/mr-EventEmitter/issues"
+  },
+  "homepage": "https://github.com/Maksims/mr-EventEmitter#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "google-closure-compiler": "^20201207.0.0",
+    "jsdoc-to-markdown": "^6.0.1"
+  }
+}
