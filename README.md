@@ -27,7 +27,7 @@ const EventEmitter = require('mr-eventemitter');
 <script type='module' src='mr-eventemitter.es8.min.js'></script>
 <script nomodule src='mr-eventemitter.es5.min.js'></script>
 ```
-Use built files from [`dist`](dist/) directory for browser. It will load ES8 (ECMA2017) version if it is supported ([~94%](https://caniuse.com/?search=ES8)), otherwise it will load ES5 (ECMA2009) version that supports pretty much [every](https://caniuse.com/?search=ES5) platform.
+Use built files from `dist` directory for browser. It will load ES8 (ECMA2017) version if it is supported ([~94%](https://caniuse.com/?search=ES8)), otherwise it will load ES5 (ECMA2009) version that supports pretty much [every](https://caniuse.com/?search=ES5) platform.
 
 ```js
 let obj = new EventEmitter();
