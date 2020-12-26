@@ -22,7 +22,15 @@
     "events",
     "eventemitter"
   ],
-  "author": "Maksims Mihejevs (core@moka.co)",
+  "author": {
+    "name" : "Makisms Mihejevs",
+    "email" : "core@moka.co",
+    "url" : "https://twitter.com/mrmaxm"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/Maksims/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Maksims/mr-EventEmitter/issues"
