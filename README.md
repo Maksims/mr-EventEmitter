@@ -143,6 +143,14 @@ let evt = obj.on('event', (value) => {
 evt.off();
 ```
 
+Remove a group of events, that match a regular expression:
+```js
+obj.off(/input:\w+/);
+
+obj.emit('init');
+obj.emit('input:start');    // ignored
+obj.emit('input:end');      // ignored
+```
 
 ## Building
 
