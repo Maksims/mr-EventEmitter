@@ -151,6 +151,6 @@ Source file: `src/index.js`
 Built versions ES5 (`dist/mr-eventemitter.es5.min.js`) and ES8 (`dist/mr-eventemitter.es8.min.js`):
 
 ```bash
-npm run install
+npm install
 npm run build
 ```

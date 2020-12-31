@@ -4,8 +4,8 @@
   "description": "Provides ability to subscribe and emit events in sync manner. With focus on performance and memory efficiency.",
   "main": "src/index.js",
   "files": [
-      "dist/mr-eventemitter.es5.min.js",
-      "dist/mr-eventemitter.es8.min.js"
+    "dist/mr-eventemitter.es5.min.js",
+    "dist/mr-eventemitter.es8.min.js"
   ],
   "scripts": {
     "closure:es5": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT5_STRICT --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es5.min.js",
@@ -23,9 +23,9 @@
     "eventemitter"
   ],
   "author": {
-    "name" : "Maksims Mihejevs",
-    "email" : "core@moka.co",
-    "url" : "https://twitter.com/mrmaxm"
+    "name": "Maksims Mihejevs",
+    "email": "core@moka.co",
+    "url": "https://twitter.com/mrmaxm"
   },
   "funding": {
     "type": "individual",
