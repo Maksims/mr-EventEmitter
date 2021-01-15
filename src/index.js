@@ -91,6 +91,7 @@ class EventEmitter {
      * @example
      * obj.off(); // removes all events
      * obj.off('event'); // removes all events named `event`.
+     * obj.off(/input:\w+/); // removes all events with name matching regular expression
      * obj.off('event', fn); // removes events named `event` with `fn`
      * obj.off('event', fn, obj); // removes events named `event` with `fn` callback and `obj` as a scope.
      */
