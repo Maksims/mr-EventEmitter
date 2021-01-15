@@ -1,17 +1,17 @@
 {
   "name": "mr-eventemitter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Provides ability to subscribe and emit events in sync manner. With focus on performance and memory efficiency.",
   "main": "src/index.js",
-  "files": [
-    "dist/mr-eventemitter.es5.min.js",
-    "dist/mr-eventemitter.es8.min.js"
-  ],
+  "browser": "dist/mr-eventemitter.es5.min.js",
+  "module": "dist/mr-eventemitter.min.js",
   "scripts": {
-    "closure:es5": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT5_STRICT --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es5.min.js",
-    "closure:es8": "google-closure-compiler --language_in=ECMASCRIPT_2017 --language_out=ECMASCRIPT_2017 --compilation_level=SIMPLE_OPTIMIZATIONS --warning_level=VERBOSE --jscomp_off=nonStandardJsDocs --jscomp_off=checkTypes --js src/index.js --js_output_file dist/mr-eventemitter.es8.min.js",
+    "babel:es5": "babel --config-file other/babel-es5.config.json --out-file dist/mr-eventemitter.es5.min.js src/index.js",
+    "babel": "babel --config-file other/babel.config.json --out-file dist/mr-eventemitter.min.js src/index.js",
+    "terser:es5": "terser --compress --mangle --output dist/mr-eventemitter.es5.min.js -- dist/mr-eventemitter.es5.min.js",
+    "terser": "terser --compress --mangle --output dist/mr-eventemitter.min.js -- dist/mr-eventemitter.min.js",
     "docs": "jsdoc2md --partial other/scope.hbs --files src/index.js > API.md",
-    "build": "npm run closure:es5 && npm run closure:es8 && npm run docs",
+    "build": "npm run babel:es5 && npm run babel && npm run terser:es5 && npm run terser && npm run docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,7 +38,12 @@
   "homepage": "https://github.com/Maksims/mr-EventEmitter#readme",
   "dependencies": {},
   "devDependencies": {
-    "google-closure-compiler": "^20201207.0.0",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "babel-plugin-remove-import-export": "^1.1.1",
+    "terser": "^5.5.1",
     "jsdoc-to-markdown": "^6.0.1"
   }
 }

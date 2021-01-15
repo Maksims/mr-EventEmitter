@@ -200,3 +200,5 @@ if (typeof(module) !== 'undefined')
 
 if (typeof(window) !== 'undefined')
     window['EventEmitter'] = EventEmitter;
+
+export default EventEmitter;
