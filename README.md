@@ -1,7 +1,7 @@
 # mr-EventEmitter
 
 Provides ability to subscribe and emit events. This event emitter is tailored for real-time applications so is designed with performance and memory efficiency in mind.  
-Also it has two build targets: ES5 (ECMA2009) and ES8 (ECMA2017), to maximize [browser support](#Browser) without sacraficing benefits of modern JS for majority of users.
+Also it has two build targets: ES5 (ECMA2009) and ES8+ (modern JS), to maximize [browser support](#Browser) without sacraficing benefits of modern JS for majority of users.
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
 
@@ -24,10 +24,10 @@ const EventEmitter = require('mr-eventemitter');
 #### Browser
 
 ```html
-<script type='module' src='mr-eventemitter.es8.min.js'></script>
+<script type='module' src='mr-eventemitter.min.js'></script>
 <script nomodule src='mr-eventemitter.es5.min.js'></script>
 ```
-Use built files from `dist` directory for browser. It will load ES8 (ECMA2017) version if it is supported ([~94%](https://caniuse.com/?search=ES8)), otherwise it will load ES5 (ECMA2009) version that supports pretty much [every](https://caniuse.com/?search=ES5) platform.
+Use built files from `dist` directory for browser. It will load ES8+ version if it is supported ([~94%](https://caniuse.com/?search=ES8)), otherwise it will load ES5 (ECMA2009) version that supports pretty much [every](https://caniuse.com/?search=ES5) platform.
 
 ```js
 let obj = new EventEmitter();
@@ -129,6 +129,15 @@ To remove all events by name:
 obj.off('event');
 ```
 
+Remove a group of events, that match a regular expression:
+```js
+obj.off(/input:\w+/);
+
+obj.emit('init');
+obj.emit('input:start');    // ignored
+obj.emit('input:end');      // ignored
+```
+
 To remove all events:
 ```js
 obj.off();
@@ -143,20 +152,11 @@ let evt = obj.on('event', (value) => {
 evt.off();
 ```
 
-Remove a group of events, that match a regular expression:
-```js
-obj.off(/input:\w+/);
-
-obj.emit('init');
-obj.emit('input:start');    // ignored
-obj.emit('input:end');      // ignored
-```
-
 ## Building
 
-Builds single file into two ES5 and ES8 versions using Google Closure Compiler.  
+Builds single file into two ES5 and ES8+ versions using Babel and Terser.  
 Source file: `src/index.js`  
-Built versions ES5 (`dist/mr-eventemitter.es5.min.js`) and ES8 (`dist/mr-eventemitter.es8.min.js`):
+Built versions ES5 (`dist/mr-eventemitter.es5.min.js`) and ES8+ (`dist/mr-eventemitter.min.js`):
 
 ```bash
 npm install
