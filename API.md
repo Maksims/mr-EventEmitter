@@ -1,22 +1,18 @@
 ## Classes
-
 <dl>
 <dt><a href="#EventEmitter">EventEmitter</a></dt>
-<dd></dd>
 <dt><a href="#EventHandler">EventHandler</a></dt>
-<dd></dd>
 </dl>
-
 <a name="EventEmitter"></a>
 
 ## EventEmitter
 
+[new EventEmitter()](#new_EventEmitter_new) (constructor)<br />
+[.on(name, callback, [scope], [once])](#EventEmitter+on) ⇒ [<code>EventHandler</code>](#EventHandler)<br />
+[.once(name, callback, [scope])](#EventEmitter+once) ⇒ [<code>EventHandler</code>](#EventHandler)<br />
+[.emit(name, [...args])](#EventEmitter+emit)<br />
+[.off([name], [callback], [scope])](#EventEmitter+off)<br />
 
-[new EventEmitter()](#new_EventEmitter_new) (constructor)
-[.on(name, callback, [scope], [once])](#EventEmitter+on) ⇒ [<code>EventHandler</code>](#EventHandler)
-[.once(name, callback, [scope])](#EventEmitter+once) ⇒ [<code>EventHandler</code>](#EventHandler)
-[.emit(name, [...args])](#EventEmitter+emit)
-[.off([name], [callback], [scope])](#EventEmitter+off)
 <a name="new_EventEmitter_new"></a>
 
 ### new EventEmitter()
@@ -96,10 +92,10 @@ obj.off(); // removes all eventsobj.off('event'); // removes all events named `
 
 ## EventHandler
 
+[new EventHandler()](#new_EventHandler_new) (constructor)<br />
+[.emit([...args])](#EventHandler+emit)<br />
+[.off()](#EventHandler+off)<br />
 
-[new EventHandler()](#new_EventHandler_new) (constructor)
-[.emit([...args])](#EventHandler+emit)
-[.off()](#EventHandler+off)
 <a name="new_EventHandler_new"></a>
 
 ### new EventHandler()
