@@ -1,16 +1,17 @@
 {
   "name": "mr-eventemitter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides ability to subscribe and emit events in sync manner. With focus on performance and memory efficiency.",
+  "type": "module",
   "main": "src/index.js",
   "browser": "dist/mr-eventemitter.es5.min.js",
   "module": "dist/mr-eventemitter.min.js",
   "scripts": {
-    "babel:es5": "babel --config-file other/babel-es5.config.json --out-file dist/mr-eventemitter.es5.min.js src/index.js",
-    "babel": "babel --config-file other/babel.config.json --out-file dist/mr-eventemitter.min.js src/index.js",
-    "terser:es5": "terser --compress --mangle --output dist/mr-eventemitter.es5.min.js -- dist/mr-eventemitter.es5.min.js",
-    "terser": "terser --compress --mangle --output dist/mr-eventemitter.min.js -- dist/mr-eventemitter.min.js",
-    "docs": "jsdoc2md --partial other/tmpl/*.hbs --files src/index.js > API.md",
+    "babel:es5": "babel --config-file ./other/babel-es5.config.json --out-file ./dist/mr-eventemitter.es5.min.js src/index.js",
+    "babel": "babel --config-file ./other/babel.config.json --out-file ./dist/mr-eventemitter.min.js src/index.js",
+    "terser:es5": "terser --compress --mangle --output ./dist/mr-eventemitter.es5.min.js -- ./dist/mr-eventemitter.es5.min.js",
+    "terser": "terser --compress --mangle --output ./dist/mr-eventemitter.min.js -- ./dist/mr-eventemitter.min.js",
+    "docs": "jsdoc2md --partial ./other/tmpl/*.hbs --files ./src/index.js > API.md",
     "build": "npm run babel:es5 && npm run babel && npm run terser:es5 && npm run terser && npm run docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -43,7 +44,7 @@
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "babel-plugin-remove-import-export": "^1.1.1",
-    "terser": "^5.5.1",
-    "jsdoc-to-markdown": "^6.0.1"
+    "jsdoc-to-markdown": "^6.0.1",
+    "terser": "^5.5.1"
   }
 }
