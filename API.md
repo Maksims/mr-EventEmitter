@@ -11,13 +11,12 @@
 
 ## EventEmitter
 
-* [EventEmitter](#EventEmitter)
-    * [new EventEmitter()](#new_EventEmitter_new)
-    * [.on(name, callback, [scope], [once])](#EventEmitter+on) ⇒ [<code>EventHandler</code>](#EventHandler)
-    * [.once(name, callback, [scope])](#EventEmitter+once) ⇒ [<code>EventHandler</code>](#EventHandler)
-    * [.emit(name, [...args])](#EventEmitter+emit)
-    * [.off([name], [callback], [scope])](#EventEmitter+off)
 
+[new EventEmitter()](#new_EventEmitter_new) (constructor)
+[.on(name, callback, [scope], [once])](#EventEmitter+on) ⇒ [<code>EventHandler</code>](#EventHandler)
+[.once(name, callback, [scope])](#EventEmitter+once) ⇒ [<code>EventHandler</code>](#EventHandler)
+[.emit(name, [...args])](#EventEmitter+emit)
+[.off([name], [callback], [scope])](#EventEmitter+off)
 <a name="new_EventEmitter_new"></a>
 
 ### new EventEmitter()
@@ -29,7 +28,7 @@ const world = new EventEmitter();world.on('event', function (number) {    con
 ```
 <a name="EventEmitter+on"></a>
 
-### eventEmitter.on(name, callback, [scope], [once]) ⇒ [<code>EventHandler</code>](#EventHandler)
+### .on(name, callback, [scope], [once]) ⇒ [<code>EventHandler</code>](#EventHandler)
 Attach an event handler.
 
 **Returns**: [<code>EventHandler</code>](#EventHandler) - Object that can be used to manage the event.  
@@ -47,7 +46,7 @@ obj.on('event', function (a, b) {    console.log(a + b);});obj.emit('event', 
 ```
 <a name="EventEmitter+once"></a>
 
-### eventEmitter.once(name, callback, [scope]) ⇒ [<code>EventHandler</code>](#EventHandler)
+### .once(name, callback, [scope]) ⇒ [<code>EventHandler</code>](#EventHandler)
 Attach an event handler which will emit only once.
 
 **Returns**: [<code>EventHandler</code>](#EventHandler) - Object that can be used to manage the event.  
@@ -64,7 +63,7 @@ obj.once('event', function (a) {    console.log(a);});obj.emit('event', 4);o
 ```
 <a name="EventEmitter+emit"></a>
 
-### eventEmitter.emit(name, [...args])
+### .emit(name, [...args])
 Emit the event by name and optional list of arguments.
 
 
@@ -79,7 +78,7 @@ obj.emit('event', 'hello', 42);
 ```
 <a name="EventEmitter+off"></a>
 
-### eventEmitter.off([name], [callback], [scope])
+### .off([name], [callback], [scope])
 Remove event handlers based on provided arguments.
 
 
@@ -97,11 +96,10 @@ obj.off(); // removes all eventsobj.off('event'); // removes all events named `
 
 ## EventHandler
 
-* [EventHandler](#EventHandler)
-    * [new EventHandler()](#new_EventHandler_new)
-    * [.emit([...args])](#EventHandler+emit)
-    * [.off()](#EventHandler+off)
 
+[new EventHandler()](#new_EventHandler_new) (constructor)
+[.emit([...args])](#EventHandler+emit)
+[.off()](#EventHandler+off)
 <a name="new_EventHandler_new"></a>
 
 ### new EventHandler()
@@ -109,7 +107,7 @@ Constructed by EventEmitter and provides easy ability to manage event.
 
 <a name="EventHandler+emit"></a>
 
-### eventHandler.emit([...args])
+### .emit([...args])
 Emit the event with optional list of arguments.
 
 
@@ -123,7 +121,7 @@ evt.emit(42, 'hello');
 ```
 <a name="EventHandler+off"></a>
 
-### eventHandler.off()
+### .off()
 Removes event from EventEmitter.
 
 **Example**  
