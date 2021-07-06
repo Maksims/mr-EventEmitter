@@ -1,7 +1,7 @@
 # mr-EventEmitter
 
 Provides ability to subscribe and emit events. This event emitter is tailored for real-time applications so is designed with performance and memory efficiency in mind.  
-Also it has two build targets: ES5 (ECMA2009) and ES8+ (modern JS), to maximize [browser support](#Browser) without sacraficing benefits of modern JS for majority of users.
+Also it has two build targets: ES5 (ECMA2009) and ES8+ (modern JS), to maximize [browser support](#Browser) without sacrificing benefits of modern JS for majority of users.
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](LICENSE)
 
@@ -27,7 +27,16 @@ const EventEmitter = require('mr-eventemitter');
 <script type='module' src='mr-eventemitter.min.js'></script>
 <script nomodule src='mr-eventemitter.es5.min.js'></script>
 ```
-Use built files from `dist` directory for browser. It will load ES8+ version if it is supported ([~94%](https://caniuse.com/?search=ES8)), otherwise it will load ES5 (ECMA2009) version that supports pretty much [every](https://caniuse.com/?search=ES5) platform.
+Use built files from a `dist` directory for the browser. It will load ES8+ version if it is supported ([~94%](https://caniuse.com/?search=ES8)), otherwise it will load ES5 (ECMA2009) version that supports pretty much [every](https://caniuse.com/?search=ES5) platform.
+
+#### CDN ([jsDelivr](https://www.jsdelivr.com/))
+
+You can use a public CDN for the library:
+
+ES8+ module: https://cdn.jsdelivr.net/npm/mr-eventemitter@0.1/dist/mr-eventemitter.min.js  
+ES5 version: https://cdn.jsdelivr.net/npm/mr-eventemitter@0.1/dist/mr-eventemitter.es5.min.js
+
+#### Example
 
 ```js
 let obj = new EventEmitter();
@@ -154,7 +163,7 @@ evt.off();
 
 ## Building
 
-Builds single file into two ES5 and ES8+ versions using Babel and Terser.  
+Builds a single file into two ES5 and ES8+ versions using Babel and Terser.  
 Source file: `src/index.js`  
 Built versions ES5 (`dist/mr-eventemitter.es5.min.js`) and ES8+ (`dist/mr-eventemitter.min.js`):
 
