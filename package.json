@@ -1,6 +1,6 @@
 {
   "name": "mr-eventemitter",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Provides ability to subscribe and emit events in sync manner. With focus on performance and memory efficiency.",
   "type": "module",
   "main": "src/index.js",
@@ -37,7 +37,6 @@
     "url": "https://github.com/Maksims/mr-EventEmitter/issues"
   },
   "homepage": "https://github.com/Maksims/mr-EventEmitter#readme",
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",

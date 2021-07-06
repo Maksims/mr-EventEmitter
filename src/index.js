@@ -104,12 +104,9 @@ class EventEmitter {
             }
             this._events.clear();
         } else if (name instanceof RegExp) {
-            for (const [eventName, val] of this._events.entries()) {
+            for (const eventName of this._events.keys()) {
                 const result = eventName.match(name);
-                if (result) {
-                    const matchedName = result[0];
-                    this.off(matchedName);
-                }
+                if (result) this.off(eventName);
             }
         } else if (! callback) {
             if (this._events.has(name)) {
